@@ -12,6 +12,7 @@ def divide(input_1, input_2):
     Handles division by zero by returning an error message.
     """
     if input_2 == 0:
+        """ths checks if the second number is a 0 and displays the right message to handle it"""
         while True:
             try:
                 second = float(input("Please type a non-zero number: "))
@@ -48,6 +49,15 @@ def calculate():
         input_2 = float(input("Type in the second number\n"))
         
         answer = operators[operator_sign](input_1, input_2)
+        """I used a dictionary for a key-value pair
+
+            sign is a key searched from operators based on the user's input
+
+            and the value is the name of the function to carryout the 
+
+            arithmetic operation
+        
+        """
 
         print(f"{input_1} {operator_sign} {input_2} = {answer}")
 
